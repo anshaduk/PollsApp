@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "django polls app"
+version = "0.1.0"
+description = "Official Django Polls App"
+authors = ["Anshad UK <anshadu@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.6"
+
+
+[tool.poetry.group.dev.dependencies]
+django-stubs = "^5.0.2"
+mypy = "^1.10.0"
+isort = "^5.13.2"
+black = "^24.4.2"
+ipython = "^8.25.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+
+[tool.django-stubs]
+django_settings_module = "mysite.settings"
